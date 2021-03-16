@@ -42,7 +42,7 @@ body {
   text-align: center;
 }
 
-@media(max-width: 1200px) {
+@media  screen and (max-width: 1200px) {
   .container {
     width: 90%;
   }
@@ -65,13 +65,13 @@ header {
   padding-top: 200px;
 }
 
-@media(max-width: 1100px) {
+@media  screen and (max-width: 1100px) {
   header {
     height: 450px;
   }
 }
 
-@media(max-width: 900px) {
+@media  screen and (max-width: 900px) {
   header {
     height: 350px;
   }
@@ -81,7 +81,7 @@ header {
   }
 }
 
-@media(max-width: 700px) {
+@media  screen and (max-width: 700px) {
   header {
     height: 280px;
   }
@@ -92,7 +92,7 @@ header {
   }
 }
 
-@media(max-width: 400px) {
+@media  screen and (max-width: 400px) {
   header {
     height: 160px;
   }
@@ -135,6 +135,57 @@ nav {
   border-bottom: solid 1.5px #434546;
 }
 
+.menu-btn,
+.menu {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .nav-list {
+    display: none;
+  }
+
+  .menu-btn,
+  .close-btn {
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(255, 250, 254);
+  }
+  
+  .menu li {
+    padding: 3px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .menu {
+    transform: translateX(-100vw);
+    transition: all 0.4s linear;
+  }
+
+  .menu.is-active{
+    transform: translateX(0);
+  }
+}
+
 
 // top--about===========================
 #about {
@@ -155,6 +206,8 @@ nav {
 
 .works-list {
   display: flex;
+  width: 780px;
+  margin: 0 auto;
 }
 
 .works-list li {
@@ -162,8 +215,8 @@ nav {
 }
 
 .works-list img {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
   transition: opacity 0.3s
 }
@@ -175,8 +228,6 @@ nav {
 .works-list li:hover {
   opacity: 0.7;
 }
-
-
 
 .scroll-top-btn {
   margin: 15px 0;
@@ -191,6 +242,22 @@ nav {
 
 .scroll-top-btn span:hover {
   transform: translateY(-0.2em);
+}
+
+@media  screen and (max-width: 850px) {
+  .works-list {
+    width: 520px;
+    flex-wrap: wrap;
+  }
+}
+
+@media  screen and (max-width: 650px) {
+  .works-list {
+    width: 250px;
+  }
+  .works-list li {
+    margin: 10px 0;
+  }
 }
 
 
