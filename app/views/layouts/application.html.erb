@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PortfolioSite</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <h1>MOMOYO YAMAJI</h1>
+        <p>portfolio</p>
+      </div>
+    </header>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="#">top</a></li>
+        <li><a href="#about">about me</a></li>
+        <li><a href="#skill">skill</a></li>
+        <li><a href="#works">works</a></li>
+      </ul>
+    </nav>
+
+
+    <%= yield %>
+  </body>
+</html>
