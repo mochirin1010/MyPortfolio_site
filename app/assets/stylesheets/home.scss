@@ -461,7 +461,7 @@ div.active {
 .about-ex01 {
   position: absolute;
   top: 45px;
-  left: 55%;
+  left: 60%;
   width: 420px;
 }
 
@@ -525,6 +525,7 @@ div.active {
 @media  screen and (max-width: 850px) {
   .about-box {
     margin: 120px 0;
+    font-size: 0.9em;
   }
   .about-pad img {
     width: 80px;
@@ -541,7 +542,7 @@ div.active {
   }
 }
 
-@media  screen and (max-width: 500px) {
+@media  screen and (max-width: 600px) {
   .about-box {
     margin-bottom: 230px;
   }
